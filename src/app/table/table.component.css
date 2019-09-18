@@ -1,0 +1,19 @@
+
+mat-card {
+  width: calc(100% - 70px);
+  height: calc(100% - 70px);
+}
+mat-toolbar {
+  height:60px;
+}
+app-p-style {
+  position:relative;
+}
+.chart-position{
+  position:relative;
+  /* top: 7vh; */
+}
+
+.match {
+  height: calc(100vh - 60px);
+}

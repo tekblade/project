@@ -1,0 +1,27 @@
+<!-- Toolbar -->
+
+<mat-toolbar color="primary" class="header">
+    <div>{{installationMeta.address.city}}, {{installationMeta.address.displayAddress2}}</div>
+    <span class="nav-tool-items">
+      
+    </span>
+  </mat-toolbar>
+
+      <div class="match">
+        <mat-grid-list class="multiline" cols="3" rowHeight="50%">
+          <mat-grid-tile *ngFor="let chartInfo of installation.current.values" id="value"  [colspan]="1" [rowspan]="1" >
+            <mat-card>
+              <mat-card-header >
+                <mat-card-title >{{ chartInfo.name }}:</mat-card-title>
+              </mat-card-header> 
+              <mat-card-content>
+                
+                <app-p-style [help]="chartInfo.name" >{{chartInfo.value}}</app-p-style> 
+              </mat-card-content>
+              <app-line-chart [name]="chartInfo.name" class="chart-position"></app-line-chart>
+            </mat-card>
+          </mat-grid-tile>
+          </mat-grid-list>
+
+      </div>
+
